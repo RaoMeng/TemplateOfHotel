@@ -1,0 +1,204 @@
+/* pages/searchHotel/searchHotel.wxss */
+
+Page {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     position: relative;
+}
+
+.pageHeader {
+     width: 100%;
+     position: fixed;
+     display: flex;
+     background: #fff;
+     top: 0;
+     flex-direction: column;
+     z-index: 10;
+}
+
+.hotelListItem {
+     width: 100%;
+     height: 172rpx;
+     padding: 16rpx;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     position: relative;
+     border-bottom: 1rpx solid #ccc;
+     box-sizing: border-box;
+}
+
+.hotelListItem .image {
+     width: 140rpx;
+     height: 140rpx;
+     /* border-radius: 20rpx; */
+     margin-right: 16rpx;
+}
+
+.hotelListItem .content {
+     display: flex;
+     flex-direction: column;
+     position: absolute;
+     left: 166rpx;
+     right: 16rpx;
+     top: 16rpx;
+     bottom: 16rpx;
+}
+
+.content .scoreItem {
+     display: flex;
+     flex: 1;
+     flex-direction: row;
+     align-items: center;
+}
+
+.content .hotelName {
+     font-size: 30rpx;
+     font-weight: bold;
+     color: black;
+     flex: 1;
+}
+
+.content .scoreItem .score {
+     font-size: 35rpx;
+     font-weight: bold;
+     color: #3e8fc7;
+}
+
+.content .scoreItem .services {
+     font-size: 24rpx;
+     color: #777;
+     margin-left: 10rpx;
+     background: #eef8fe;
+     padding: 2rpx 8rpx;
+     border-radius: 15rpx;
+}
+
+.content .scoreItem .address {
+     font-size: 24rpx;
+     color: #777;
+}
+
+.priceItem {
+     /*让文字沉底的方法 */
+     display: table-cell;
+     vertical-align: bottom;
+     position: absolute;
+     right: 16rpx;
+     bottom: 16rpx;
+}
+
+.priceItem .price {
+     font-size: 35rpx;
+     font-weight: bold;
+     color: #ff1d1d;
+}
+
+.priceItem .priceTip {
+     font-size: 24rpx;
+     color: #3f3f3f;
+}
+
+.searchHeader {
+     width: 100%;
+     height: 90rpx;
+     box-sizing: border-box;
+     background: #f2f2f2;
+     display: flex;
+     padding: 0 10rpx 0 20rpx;
+     flex-direction: row;
+     align-items: center;
+}
+
+.searchHeader .location {
+     font-size: 24rpx;
+     color: #666;
+     margin-right: 6rpx;
+}
+
+.filterView {
+     width: 100%;
+     height: 76rpx;
+     align-items: center;
+     background: white;
+     display: flex;
+     flex-direction: row;
+     border-bottom: 1rpx #dedede solid;
+}
+
+.filterOptions {
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+}
+
+.filterItem, .filterActive {
+     flex: 1;
+     font-size: 26rpx;
+     text-align: center;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.filterItem {
+     color: #666;
+}
+
+.filterActive {
+     color: #e55509;
+}
+
+.arrowUp, .arrowDown {
+     display: inline-block;
+     border: 5px solid transparent;
+     margin-left: 5px;
+}
+
+.filterItem .arrowUp, .filterItem .arrowDown {
+     border-bottom: 5px solid #666;
+     border-top: 0;
+}
+
+.filterActive .arrowUp {
+     border-bottom: 0;
+     border-top: 5px solid #e55509;
+}
+
+.filterActive .arrowDown {
+     border-bottom: 5px solid #e55509;
+     border-top: 0;
+}
+
+.filterMenu {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+     border-left: 1rpx solid #979797;
+     width: 220rpx;
+}
+
+.filterMenu .title {
+     font-size: 26rpx;
+     color: #666;
+}
+
+.filterMenu .icon {
+     width: 24rpx;
+     height: 24rpx;
+     margin-left: 6rpx;
+}
+
+.hotelListContent {
+     width: 100%;
+     position: absolute;
+     top: 166rpx;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background: white;
+}

@@ -1,0 +1,7 @@
+<template name='settingItem'>
+     <view class='settingItem'>
+          <text class='caption'>{{caption}}</text>
+          <text class='value'>{{value}}</text>
+          <image wx:if='{{needIcon}}' src='../../res/images/ic_right_arrow.png' mode='widthFix' class='icon' />
+     </view>
+</template>

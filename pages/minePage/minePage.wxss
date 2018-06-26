@@ -1,0 +1,87 @@
+/* pages/minePage/minePage.wxss */
+
+Page {
+     width: 100%;
+     height: 100%;
+     background: #f2f2f2;
+     display: flex;
+     flex-direction: column;
+}
+
+.loginHeader {
+     width: 100%;
+     box-sizing: border-box;
+     padding: 16rpx 30rpx;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     background: white;
+}
+
+.userHead {
+     width: 70rpx;
+     height: 70rpx;
+     margin: 20rpx;
+     border-radius: 50%;
+}
+
+.userTitle {
+     margin-left: 16rpx;
+     font-size: 30rpx;
+     color: #333;
+}
+
+.order {
+     width: 100%;
+     height: max-content;
+     box-sizing: border-box;
+     display: flex;
+     flex-direction: row;
+     padding: 32rpx 0;
+     margin: 20rpx 0;
+     background: white;
+}
+
+.order .item {
+     display: flex;
+     flex-direction: row;
+     flex: 1;
+     justify-content: center;
+     align-items: center;
+}
+
+.order .item .icon {
+     width: 40rpx;
+}
+
+.order .item .text {
+     margin-left: 16rpx;
+     font-size: 30rpx;
+     color: #333;
+}
+
+.settingItem {
+     display: flex;
+     width: 100%;
+     box-sizing: border-box;
+     flex-direction: row;
+     background: white;
+     border-bottom: #dedede solid 1px;
+     padding: 22rpx 26rpx;
+     align-items: center;
+}
+
+.settingItem .caption, .settingItem .value {
+     font-size: 30rpx;
+     color: #333;
+}
+
+.settingItem .value {
+     flex: 1;
+     text-align: right;
+}
+
+.settingItem .icon {
+     width: 28rpx;
+     margin-left: 10rpx;
+}

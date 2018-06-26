@@ -1,0 +1,122 @@
+/* pages/bookHotel/bookHotel.wxss */
+
+Page {
+     width: 100%;
+     height: 100%;
+     box-sizing: border-box;
+     display: flex;
+     flex-direction: column;
+     position: relative;
+     font-size: 30rpx;
+     background: #f2f2f2;
+}
+
+.bookScroll {
+     width: 100%;
+     height: max-content;
+     flex: 1;
+     white-space: nowrap;
+}
+
+.bookBody {
+     width: 100%;
+     overflow: scroll;
+     padding-bottom: 100rpx;
+     /* position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 100rpx; */
+}
+
+.bookBody .bookMsg {
+     margin: 24rpx;
+     display: flex;
+     flex-direction: column;
+     padding: 36rpx;
+     border-radius: 10rpx;
+     box-shadow: 0rpx 6rpx 20rpx #ccc;
+     background: white;
+}
+
+.payItem {
+     width: 100%;
+     height: 100rpx;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     background: white;
+     border-top: 1rpx solid #ee6715;
+     font-size: 32rpx;
+     z-index: 10;
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     right: 0;
+}
+
+.payItem .priceItem {
+     flex: 1;
+     color: #ee6715;
+     padding-left: 24rpx;
+}
+
+.payItem .payBtn {
+     display: flex;
+     align-items: center;
+     height: 100%;
+     justify-content: center;
+     color: white;
+     font-weight: bold;
+     width: 250rpx;
+     background: #ee6715;
+}
+
+.settingItem {
+     display: flex;
+     width: 100%;
+     box-sizing: border-box;
+     flex-direction: row;
+     background: white;
+     border-bottom: #dedede solid 1px;
+     padding: 26rpx;
+     align-items: center;
+}
+
+.settingItem .caption, .settingItem .value {
+     font-size: 30rpx;
+     color: #333;
+     align-items: center;
+     display: flex;
+}
+
+.settingItem .caption {
+     width: 220rpx;
+}
+
+.settingItem .value {
+     flex: 1;
+     text-align: left;
+}
+
+.settingItem .icon {
+     width: 28rpx;
+     margin-left: 10rpx;
+}
+
+.settingItem .discount, .settingItem .remark {
+     flex: 1;
+     text-align: right;
+     display: inline-block;
+     align-items: center;
+}
+
+.settingItem .discount {
+     color: #ee6715;
+}
+
+.settingItem .invoice {
+     color: #ee6715;
+     position: absolute;
+     right: 0;
+}

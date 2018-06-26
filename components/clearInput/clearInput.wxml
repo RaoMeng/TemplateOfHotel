@@ -1,0 +1,5 @@
+<view class='input-class'>
+     <image src='{{inputIcon}}' mode="scaleToFill" class='icon-class'></image>
+     <input placeholder='{{inputHint}}' bindconfirm='{{confirmTap}}' style='flex:1;width:100%;padding-left:12rpx;' bindinput='inputListener' bindconfirm='inputConfirm' value='{{inputValue}}' type='{{inputType}}' password='{{isPassword}}' confirm-type='{{confirmType}}'></input>
+     <image class="{{isClearShow?'clearImgShow':'clearImgHide'}}" src='clear.png' bindtap='clearTap' mode='widthFix'></image>
+</view>

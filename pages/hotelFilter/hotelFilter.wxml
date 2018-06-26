@@ -1,0 +1,14 @@
+<!--pages/hotelFilter/hotelFilter.wxml-->
+<import src='template.wxml' />
+
+<view class='filterContent'>
+     <template is='settingItem' data="{{caption:'酒店位置',value:'',needIcon:false}}" />
+     <template is='settingItem' data="{{caption:'行政区域 ',value:'南山区 ',needIcon:true}}" />
+     <template is='settingItem' data="{{caption:'商圈 ',value:'xx商圈 ',needIcon:true}}" />
+     <template is='settingItem' data="{{caption:'地铁 ',value:'深大地铁站 ',needIcon:true}}" />
+</view>
+
+<view class='filterMenu'>
+     <text class='clear'>清除筛选</text>
+     <text class='confirm'>确定</text>
+</view>

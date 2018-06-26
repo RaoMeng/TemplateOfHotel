@@ -1,0 +1,270 @@
+/* pages/hotelDetail/hotelDetail.wxss */
+
+Page {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     position: relative;
+     box-sizing: border-box;
+}
+
+.divideItem {
+     box-sizing: border-box;
+     width: 100%;
+     background: white;
+     padding: 24rpx;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+}
+
+.divideText {
+     flex: 1;
+     text-align: center;
+     font-size: 24rpx;
+     color: #999;
+}
+
+.dateContent {
+     width: 100%;
+     height: max-content;
+     display: flex;
+     flex-direction: row;
+     padding: 10rpx 10rpx 26rpx;
+     box-sizing: border-box;
+     align-items: center;
+     border-bottom: 1rpx solid #eee;
+}
+
+.dateItem {
+     flex: 1;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     position: relative;
+}
+
+.dateItem .date {
+     display: flex;
+     flex-direction: row;
+     margin: 0 auto;
+}
+
+.dateItem .date .day {
+     height: fit-content;
+     font-size: 45rpx;
+     color: #ee6715;
+     text-align: center;
+}
+
+.dateItem .date .monthWeek {
+     height: fit-content;
+     display: flex;
+     flex-direction: column;
+     margin-left: 6rpx;
+}
+
+.dateItem .date .monthWeek .week, .dateItem .date .monthWeek .month {
+     flex: 1;
+     font-size: 22rpx;
+}
+
+.dayCount {
+     font-size: 32rpx;
+     margin: 0 10rpx;
+}
+
+.roomListItem {
+     width: 100%;
+     height: 172rpx;
+     padding: 16rpx;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     position: relative;
+     border-bottom: 1rpx solid #ccc;
+     box-sizing: border-box;
+}
+
+.roomListItem .image {
+     width: 140rpx;
+     height: 140rpx;
+     /* border-radius: 20rpx; */
+     margin-right: 16rpx;
+}
+
+.roomListItem .content {
+     display: flex;
+     flex-direction: column;
+     position: absolute;
+     left: 166rpx;
+     right: 16rpx;
+     top: 16rpx;
+     bottom: 16rpx;
+}
+
+.content .scoreItem, .content .roomService, .content .priceItem {
+     display: flex;
+     flex: 1;
+     flex-direction: row;
+     align-items: center;
+}
+
+.content .roomService {
+     color: #777;
+     font-size: 24rpx;
+}
+
+.content .roomName {
+     font-size: 30rpx;
+     font-weight: bold;
+     color: black;
+     flex: 1;
+}
+
+.content .priceItem {
+     /*让文字沉底的方法 */
+     display: table-cell;
+     vertical-align: bottom;
+}
+
+.content .priceItem .price {
+     font-size: 35rpx;
+     font-weight: bold;
+     color: #ff1d1d;
+}
+
+.content .priceItem .priceTip {
+     font-size: 24rpx;
+     color: #3f3f3f;
+}
+
+.bookBtn, .bookBtnHover {
+     position: absolute;
+     right: 16rpx;
+     bottom: 16rpx;
+     border-radius: 8rpx;
+     color: white;
+     font-size: 26rpx;
+     padding: 8rpx 32rpx;
+}
+
+.bookBtn {
+     background: #fe7e38;
+}
+
+.bookBtnHover {
+     background: #e55509;
+}
+
+.hotelDetailPic {
+     width: 100%;
+     height: 330rpx;
+     position: relative;
+}
+
+.hotelDetailPic .image {
+     width: 100%;
+     height: 100%;
+}
+
+.hotelDetailPic .introduce {
+     width: 100%;
+     height: 70rpx;
+     box-sizing: border-box;
+     display: flex;
+     padding: 0 20rpx;
+     flex-direction: row;
+     background: rgba(141, 73, 73, 0.6);
+     /* opacity: 0.6; */
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     align-items: center;
+}
+
+.hotelDetailPic .introduce .hotelName, .hotelDetailPic .introduce .text {
+     color: white !important;
+     font-size: 28rpx;
+}
+
+.hotelDetailPic .introduce .hotelName {
+     flex: 1;
+}
+
+.addressItem {
+     width: 100%;
+     height: 110rpx;
+     display: flex;
+     flex-direction: row;
+     align-content: center;
+     overflow: hidden;
+     border-bottom: 1rpx solid #dedede;
+}
+
+.addressItem .locationIcon {
+     width: 24rpx;
+     height: 24rpx;
+     padding: 24rpx 0;
+     margin-left: 35rpx;
+     margin-top: 6rpx;
+}
+
+.addressItem .address {
+     flex: 1;
+     font-size: 24rpx;
+     padding: 24rpx 0;
+     color: #777;
+     margin: 0 20rpx 0 8rpx;
+}
+
+.addressItem .phoneIcon {
+     width: 140rpx;
+     height: 100%;
+}
+
+.serviceItem {
+     display: flex;
+     width: 100%;
+     flex-direction: row;
+     height: 80rpx;
+     box-sizing: border-box;
+     align-items: center;
+     padding: 0 20rpx;
+}
+
+.serviceItem .title {
+     font-size: 24rpx;
+     color: #999;
+     margin-right: 20rpx;
+}
+
+.serviceItem .serviceList {
+     display: flex;
+     flex: 1;
+     flex-direction: row;
+     align-items: center;
+     overflow: scroll;
+     white-space: nowrap;
+}
+
+.serviceItem .serviceList .service {
+     display: inline-block;
+     width: 150rpx;
+     justify-content: center;
+     flex-direction: row;
+     align-items: center;
+}
+
+.serviceItem .serviceList .service .icon {
+     width: 24rpx;
+     height: 24rpx;
+}
+
+.serviceItem .serviceList .service .text {
+     margin-left: 8rpx;
+     font-size: 24rpx;
+     color: #333;
+     text-align: center;
+}

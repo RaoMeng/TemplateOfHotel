@@ -1,0 +1,66 @@
+<!--pages/homePage/homePage.wxml-->
+<swiper class='homeHeader' indicator-dots autoplay interval='3000' circular skip-hidden-item-layout>
+     <swiper-item class='swiper' wx:for="{{homeAdvertises}}">
+          <image src='{{item.imgSrc}}' mode='scaleToFill' class='swiper' bindtap='homeAdvertisesTap' data-index='{{index}}'></image>
+     </swiper-item>
+</swiper>
+
+<view class='filterContent'>
+     <view class='filterView'>
+          <view class='location'>
+               <image src='../../res/images/ic_city_location.png' mode='aspectFit' class='icon' bindtap='getLocalLocation' />
+               <text class='caption' bindtap='getLocalLocation'>当前城市：</text>
+               <text class='city' bindtap='selectCity'>{{location}}</text>
+               <image src='../../res/images/ic_right_arrow.png' mode='widthFix' class='icon' bindtap='selectCity' />
+          </view>
+          <view class='location'>
+               <view class='filter' bindtap='filterTap'>
+                    <image src='../../res/images/ic_filter.png' mode='widthFix' class='icon' />
+                    <text class='text'>筛选</text>
+               </view>
+               <view style='color:#ccc;text-align: center;'>|
+               </view>
+               <view class='filter' bindtap='nearbyTap'>
+                    <image src='../../res/images/ic_nearby.png' mode='widthFix' class='icon' />
+                    <text class='text'>我的附近</text>
+               </view>
+          </view>
+
+          <view class='divideItem'>
+               <text class='divideText'>入住</text>
+               <text class='divideText'>退房</text>
+          </view>
+
+          <!-- 日期计算  -->
+          <view class='dateContent'>
+               <view class='dateItem'>
+                    <picker class='date' mode="date" value="{{startDate}}" start="{{currentDate}}" end="{{endOfStartDate}}" bindchange="startDateChange">
+                         <view class='date'>
+                              <text class='day'>{{startDay}}</text>
+                              <view class='monthWeek'>
+                                   <text class='month'>{{startMonth}}月</text>
+                                   <text class='week'>{{startWeek}}</text>
+                              </view>
+                         </view>
+                    </picker>
+                    <view class='horizontalLine' style='width:60rpx;position:absolute;right:0;'></view>
+               </view>
+               <text class='dayCount'>{{dayCount}}天</text>
+               <view class='dateItem'>
+                    <view class='horizontalLine' style='width:60rpx;position:absolute;'></view>
+                    <picker class='date' mode="date" value="{{endDate}}" start="{{startDate}}" end="{{endOfEndDate}}" bindchange="endDateChange">
+                         <view class='date'>
+                              <text class='day'>{{endDay}}</text>
+                              <view class='monthWeek'>
+                                   <text class='month'>{{endMonth}}月</text>
+                                   <text class='week'>{{endWeek}}</text>
+                              </view>
+                         </view>
+                    </picker>
+               </view>
+          </view>
+          <!-- 日期end  -->
+
+          <view class='commonBtn' hover-class='commonBtnHover' bindtap='searchEvent' hover-stay-time='100'>立即搜索</view>
+     </view>
+</view>

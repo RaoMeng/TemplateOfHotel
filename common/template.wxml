@@ -1,0 +1,6 @@
+<template name="search_input">
+     <view class='common_search_input'>
+          <image src='../../res/images/search.png' mode="scaleToFill" class='common_search_img'></image>
+          <input placeholder='{{hint}}' bindconfirm='{{confirmTap}}' style='width:100%;'></input>
+     </view>
+</template>

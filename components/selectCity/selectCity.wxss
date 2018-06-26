@@ -1,0 +1,59 @@
+/* components/selectCity/selectCity.wxss */
+
+.cityList {
+     width: 100%;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+}
+
+.citySlide {
+     display: flex;
+     flex-direction: column;
+     width: 60rpx;
+     height: calc(100% - 80px);
+     position: absolute;
+     top: 40px;
+     right: 16rpx;
+     align-items: center;
+     justify-content: center;
+     background-color: #ccc;
+     opacity: 0.6;
+}
+
+.citySlideItem {
+     width: 100%;
+     /* padding-top: 5rpx;
+     padding-bottom: 5rpx; */
+     flex: 1;
+     text-align: center;
+     font-size: 24rpx;
+}
+
+/* .cityListLetter {
+     width: 100%;
+     padding: 16rpx 24rpx 16rpx;
+     font-size: 26rpx;
+     background-color: skyblue;
+}
+
+.cityListItem {
+     width: 100%;
+     padding: 36rpx 24rpx;
+     font-size: 26rpx;
+     background-color: white;
+     border-bottom: gray 1rpx solid;
+} */
+
+.letterText {
+     position: absolute;
+     width: 80px;
+     height: 80px;
+     line-height: 80px;
+     text-align: center;
+     font-size: 30rpx;
+     color: white;
+     border-radius: 12rpx;
+     background-color: #bbb;
+     opacity: 0.8;
+}

@@ -1,0 +1,25 @@
+<import src="../../common/template.wxml" />
+
+<template name="order_list">
+     <swiper-item style="height:100%;width:100%;display: flex; justify-content: center; align-content: center;">
+          <view wx:if="{{orderList == undefined||orderList==null}}" class='empty_view'>
+               <image style="width:100rpx;height:100rpx;margin:0 auto;" src='../../res/images/loading.gif'></image>
+               <text style='color:gray;font-size:32rpx;margin-top:16rpx; margin:0 auto;'>订单加载中...</text>
+          </view>
+          <view wx:elif="{{orderList.length==0}}" class='empty_view'>
+               <image src='../../res/images/ic_empty.png' style='width:130rpx;height:130rpx;margin:0 auto' mode="scaleToFill"></image>
+               <text style='color:gray;font-size:28rpx; margin:6rpx auto;'>{{emptyMessage}}</text>
+          </view>
+          <scroll-view wx:else class='common_b2b_scroll' scroll-y='true' bindscroll='{{scrollTap}}' bindscrolltolower="{{scrolltolower}}" bindscrolltoupper="{{scrolltoupper}}" scroll-top='{{scrollTop}}' upper-threshold='5' bindtouchend='{{scrollTouchEnd}}' bindtouchstart='{{scrollTouchStart}}'>
+               <navigator wx:for='{{orderList}}' url='../purchase_detail/purchase_detail?id={{item.id}}&state={{item.billState}}&json={{item.jsonData}}&index={{index}}&moduleIndex={{currentIndex}}' class='module_item'>
+                    <!--列表item布局  -->
+               </navigator>
+
+               <view wx:if="{{loadenable}}" class="loadmore">
+                    <image src='../../res/images/loading.gif' class="loading" mode="scaleToFill" style='margin:auto 0;'></image>
+                    <text style='margin-left:20rpx;'>正在加载更多</text>
+               </view>
+               <text wx:else class="loadmore">没有更多数据</text>
+          </scroll-view>
+     </swiper-item>
+</template>

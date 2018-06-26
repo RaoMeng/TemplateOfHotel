@@ -1,0 +1,20 @@
+<import src='../../common/template.wxml' />
+<import src='template.wxml' />
+
+<view class='order_contain'>
+     <view style='width:100%;background:#f2f2f2;'>
+          <clearInput inputHint='搜索订单' icon-class='common_search_img' input-class='common_search_input' confirmType='search' bind:inputListener='inputListener' bind:inputConfirm='searchEvent' />
+          <view class='header_tab'>
+               <block wx:for="{{stateList}}">
+                    <view class="{{selectedIndex == index?'tab_item_selected':'tab_item_default'}}" bindtap='turnPage' data-index="{{index}}" hover-class='tab_item_hover'>{{item}}</view>
+               </block>
+          </view>
+     </view>
+
+     <swiper current='{{selectedIndex}}' bindchange='swiperChange' style='flex:1;'>
+          <template is="order_list" data="{{orderList:orderAll,loadEnable:allLoadEnable,common_row:common_row,scrolltolower:'allScrollLower',emptyMessage:allEmpty,currentIndex:1}}" />
+          <template is="order_list" data="{{orderList:orderTodo,loadEnable:todoLoadEnable,common_row:common_row,scrolltolower:'todoScrollLower',emptyMessage:todoEmpty,currentIndex:2}}" />
+          <template is="order_list" data="{{orderList:orderDone,loadEnable:doneLoadEnable,common_row:common_row,scrolltolower:'doneScrollLower',emptyMessage:doneEmpty,currentIndex:3}}" />
+          <template is="order_list" data="{{orderList:orderCancel,loadEnable:cancelLoadEnable,common_row:common_row,scrolltolower:'cancelScrollLower',emptyMessage:cancelEmpty,currentIndex:4}}" />
+     </swiper>
+</view>

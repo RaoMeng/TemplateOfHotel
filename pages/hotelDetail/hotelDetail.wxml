@@ -1,0 +1,68 @@
+<!--pages/hotelDetail/hotelDetail.wxml-->
+<import src='template.wxml' />
+
+<view class='hotelDetailPic'>
+     <image src='../../res/images/ic_hotel_detail.png' class='image' mode='aspectFill' />
+
+     <view class='introduce'>
+          <view class='hotelName'>{{hotelName}}</view>
+          <view class='text'>酒店介绍</view>
+     </view>
+</view>
+
+<view class='addressItem'>
+     <image class='locationIcon' mode='aspectFit' src='../../res/images/ic_city_location.png' />
+     <text class='address'>{{hotelAddress}}</text>
+     <image class='phoneIcon' mode='aspectFill' src='../../res/images/ic_hotel_phone.png' />
+</view>
+
+<view class='serviceItem'>
+     <text class='title'>配套设施</text>
+     <scroll-view class='serviceList' scroll-x>
+          <view style='width:100%;'>
+               <view class='service' wx:for='{{serviceList}}'>
+                    <image class='icon' mode='widthFix' src='{{item.icon}}' />
+                    <text class='text'>{{item.name}}</text>
+               </view>
+          </view>
+     </scroll-view>
+</view>
+
+<view style='width:100%;height:16rpx;background:#dedede'></view>
+
+<view class='divideItem'>
+     <text class='divideText'>入住</text>
+     <text class='divideText'>退房</text>
+</view>
+
+<!-- 日期计算  -->
+<view class='dateContent'>
+     <view class='dateItem'>
+          <picker class='date' mode="date" value="{{startDate}}" start="{{currentDate}}" end="{{endOfStartDate}}" bindchange="startDateChange">
+               <view class='date'>
+                    <text class='day'>{{startDay}}</text>
+                    <view class='monthWeek'>
+                         <text class='month'>{{startMonth}}月</text>
+                         <text class='week'>{{startWeek}}</text>
+                    </view>
+               </view>
+          </picker>
+          <view class='horizontalLine' style='width:60rpx;position:absolute;right:0;'></view>
+     </view>
+     <text class='dayCount'>{{dayCount}}天</text>
+     <view class='dateItem'>
+          <view class='horizontalLine' style='width:60rpx;position:absolute;'></view>
+          <picker class='date' mode="date" value="{{endDate}}" start="{{startDate}}" end="{{endOfEndDate}}" bindchange="endDateChange">
+               <view class='date'>
+                    <text class='day'>{{endDay}}</text>
+                    <view class='monthWeek'>
+                         <text class='month'>{{endMonth}}月</text>
+                         <text class='week'>{{endWeek}}</text>
+                    </view>
+               </view>
+          </picker>
+     </view>
+</view>
+<!-- 日期end  -->
+
+<template is='roomListItem' wx:for='{{roomArray}}' data="{{imageUrl:item.image,roomName:item.name,services:item.service,price:item.price,index:index,bookTap:'bookRoom'}}" />

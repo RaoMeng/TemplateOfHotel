@@ -1,0 +1,25 @@
+<!--pages/minePage/minePage.wxml-->
+<import src='template.wxml' />
+
+<view class='loginHeader'>
+     <image src='{{userHead}}' class='userHead' mode='aspectFill' bindtap='previewHead' />
+     <text class='userTitle' bindtap='loginTap'>{{userTitle}}</text>
+</view>
+
+<view class='order'>
+     <view class='item' bindtap='allOrderTap'>
+          <image src='../../res/images/ic_order_all.png' mode='widthFix' class='icon' />
+          <text class='text'>全部订单</text>
+     </view>
+     <view class='vercialLine'>
+     </view>
+     <view class='item' bindtap='todoOrderTap'>
+          <image src='../../res/images/ic_order_book.png' mode='widthFix' class='icon' />
+          <text class='text'>待入住订单</text>
+     </view>
+</view>
+
+<template is='settingItem' data="{{caption:'我的会员',value:'普通会员',needIcon:false}}" />
+<template is='settingItem' data="{{caption:'我的积分',value:'100积分',needIcon:false}}" />
+<template is='settingItem' data="{{caption:'我的优惠券',value:'3张',needIcon:true}}" />
+<template is='settingItem' data="{{caption:'关于UU酒店',value:'',needIcon:true}}" />

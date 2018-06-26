@@ -1,0 +1,23 @@
+<template name="hotelListItem">
+     <navigator class='hotelListItem' url='../hotelDetail/hotelDetail?name={{hotelName}}&address={{address}}&distance={{distance}}'>
+          <image class='image' mode='scaleToFill' src='{{imageUrl}}'></image>
+
+          <view class='content'>
+               <text class='hotelName'>{{hotelName}}</text>
+               <view class='scoreItem'>
+                    <text class='score'>{{score}}分</text>
+                    <text class='services'>{{services}}</text>
+               </view>
+               <view class='scoreItem'>
+                    <image src='../../res/images/ic_city_location.png' style='width:24rpx;height:24rpx;margin-right:10rpx;'></image>
+                    <text class='address'>{{address}}，距我{{distance}}公里</text>
+               </view>
+          </view>
+
+          <view class='priceItem'>
+               <text class='price'>¥</text>
+               <text class='price'>{{price}}</text>
+               <text class='priceTip'>起</text>
+          </view>
+     </navigator>
+</template>

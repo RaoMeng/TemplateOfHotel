@@ -1,0 +1,7 @@
+{
+     "navigationBarTitleText": "酒店列表",
+     "enablePullDownRefresh": true,
+     "usingComponents": {
+          "clearInput": "../../components/clearInput/clearInput"
+     }
+}

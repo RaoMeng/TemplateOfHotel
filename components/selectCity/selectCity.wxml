@@ -1,0 +1,13 @@
+<!--components/selectCity/selectCity.wxml-->
+<scroll-view class='cityList' scroll-y scroll-into-view='{{currentIndex}}' scroll-top='{{scrollTop}}'>
+     <view wx:for='{{allCities}}'>
+          <view class='letter-class' id="id{{index}}">{{item.letter}}</view>
+          <view class='item-class' wx:for='{{item.cityList}}' wx:for-item='cityItem' bindtap='citySelectEvent' data-city='{{cityItem.name}}' data-letter='{{cityItem.key}}'>{{cityItem.name}}</view>
+     </view>
+</scroll-view>
+
+<view class='citySlide' catchtouchstart='slideStart' catchtouchstart='slideMove' catchtouchend='slideEnd'>
+     <view class='citySlideItem' wx:for='{{allCities}}' data-index='{{index}}'>{{item.letter}}</view>
+</view>
+
+<text class='letterText' hidden='{{isLetterHidden}}' style='top:{{letterTop}}px;left:{{letterLeft}}px'>{{letterText}}</text>
