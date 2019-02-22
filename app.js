@@ -4,6 +4,9 @@ var httpRequest = require('common/request.js');
 
 App({
      onLaunch: function () {
+          wx.setEnableDebug({
+               enableDebug: true
+          })
           var that = this;
           wx.getSystemInfo({
                success: function (res) {

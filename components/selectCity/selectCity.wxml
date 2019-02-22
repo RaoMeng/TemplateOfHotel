@@ -6,7 +6,7 @@
      </view>
 </scroll-view>
 
-<view class='citySlide' catchtouchstart='slideStart' catchtouchstart='slideMove' catchtouchend='slideEnd'>
+<view class='citySlide' catchtouchstart='slideStart' catchtouchmove='slideMove' catchtouchend='slideEnd'>
      <view class='citySlideItem' wx:for='{{allCities}}' data-index='{{index}}'>{{item.letter}}</view>
 </view>
 

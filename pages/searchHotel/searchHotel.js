@@ -10,6 +10,7 @@ function HotelBean() {
      var address;
      var distance;
      var price;
+     var test;
 }
 
 Page({
@@ -32,7 +33,6 @@ Page({
           this.setData({
                location: options.location
           });
-
 
           for (var i = 0; i < 10; i++) {
                var hotelBean = new HotelBean();

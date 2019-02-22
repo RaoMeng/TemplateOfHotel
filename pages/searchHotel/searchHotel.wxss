@@ -1,5 +1,5 @@
 /* pages/searchHotel/searchHotel.wxss */
-
+ 
 Page {
      width: 100%;
      display: flex;
